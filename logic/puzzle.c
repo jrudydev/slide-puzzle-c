@@ -100,13 +100,13 @@ void swapPositions(Puzzle *puzzle, Position pos1, Position pos2) {
 }
 
 
-bool comparePuzzles(Puzzle *puz1, Puzzle *puz2) {
-    int size = puz1->size;
+bool comparePuzzles(Puzzle *puzzel1, Puzzle *puzzel2) {
+    int size = puzzel1->size;
     for(int i = 0; i < size; i++)
         for(int j = 0; j < size; j++)
-            if(puz1->matrix[i][j] != puz2->matrix[i][j])
+            if(puzzel1->matrix[i][j] != puzzel2->matrix[i][j])
                 return false;
-    
+
     return true;
 }
 

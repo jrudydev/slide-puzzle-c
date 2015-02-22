@@ -25,7 +25,7 @@ Puzzle *createPuzzleCopy(Puzzle *puzzle);
 
 void shufflePuzzle(Puzzle *puzzle, int suffleCount);
 void swapPositions(Puzzle *puzzle, Position pos1, Position pos2);
-bool comparePuzzles(Puzzle *puz1, Puzzle *puz2);
+bool comparePuzzles(Puzzle *puzzle1, Puzzle *puzzle2);
 
 void applyDirection(Puzzle *puzzle, int direction);
 void setDirectionVectors(Puzzle *puzzle);

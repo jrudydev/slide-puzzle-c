@@ -25,4 +25,4 @@ logic/puzzle.o: logic/puzzle.c
 		gcc -c logic/puzzle.c
 
 clean:
-		rm main.o interface.o tests.o rand.o position.o list.o puzzle.o build/linux/puzzle.exe
+		rm main.o interface.o tests.o rand.o position.o list.o puzzle.o

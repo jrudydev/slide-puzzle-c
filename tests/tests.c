@@ -10,25 +10,23 @@
 List *testList;
 Puzzle *testPuzzle1, *testPuzzle2;
 
-void testListAddNode();
-void testListAddDuplicateKey();
-void testListDeleteHead();
-void testPuzzleCopy();
-void testPuzzleShuffle();
+void testListAddNodeSizeIncrease();
+void testListAddDuplicateKeyNotAdded();
+void testListDeleteHeadReduceSize();
+void testPuzzleCopyAreEqual();
+void testPuzzleShuffleNotSame();
 
 
 void unitTests() {
     testList = createList();
     testPuzzle1 = createPuzzle(getRand(MAX_PUZZLE_SIZE - MIN_PUZZLE_SIZE) + MIN_PUZZLE_SIZE); // random board size between 2-6
     
-    testListAddNode();
-    testListAddDuplicateKey();
-    testListDeleteHead();
+    testListAddNodeSizeIncrease();
+    testListAddDuplicateKeyNotAdded();
+    testListDeleteHeadReduceSize();
     
-    testPuzzleCopy();
-    testPuzzleShuffle();
-    
-    testPuzzleCopy();
+    testPuzzleCopyAreEqual();
+    testPuzzleShuffleNotSame();
     
     destroyList(&testList);
     destroyPuzzle(&testPuzzle1);
@@ -36,34 +34,35 @@ void unitTests() {
 }
 
 
-void testListAddNode() {
+void testListAddNodeSizeIncrease() {
     append(testList, createNode(5, 'a'));
     assert(testList->size = 1);
 }
 
 
-void testListAddDuplicateKey() {
+void testListAddDuplicateKeyNotAdded() {
     addKey(testList, createNode(3, 'b'));
     addKey(testList, createNode(3, 'b'));
     assert(testList->size == 2);
 }
 
 
-void testListDeleteHead() {
+void testListDeleteHeadReduceSize() {
     deleteHead(&testList);
     assert(testList->size = 1);
 }
 
 
-void testPuzzleCopy() {
+void testPuzzleCopyAreEqual() {
     testPuzzle2 = createPuzzleCopy(testPuzzle1);
     assert(comparePuzzles(testPuzzle1, testPuzzle2));
     assert(comparePositions(testPuzzle1->emptySpace, testPuzzle2->emptySpace));
     assert(testPuzzle1->inverted == testPuzzle2->inverted);
+    assert(testPuzzle1->size == testPuzzle2->size);
 }
 
 
-void testPuzzleShuffle() {
+void testPuzzleShuffleNotSame() {
     shufflePuzzle(testPuzzle1, 1000);
     assert(testPuzzle1 != testPuzzle2);
 }
