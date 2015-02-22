@@ -59,6 +59,7 @@ void testPuzzleCopy() {
     testPuzzle2 = createPuzzleCopy(testPuzzle1);
     assert(comparePuzzles(testPuzzle1, testPuzzle2));
     assert(comparePositions(testPuzzle1->emptySpace, testPuzzle2->emptySpace));
+    assert(testPuzzle1->inverted == testPuzzle2->inverted);
 }
 
 

@@ -2,7 +2,7 @@
 //  Created by Rodolfo Gomez
 //
 //  Description: Generates a random integer seeded by time converted to unsigned for compatiblity
-//  Refrenced: http://eternallyconfuzzled.com/arts/jsw_art_rand.aspx
+//  Referenced: http://eternallyconfuzzled.com/arts/jsw_art_rand.aspx
 
 #include "rand.h"
 

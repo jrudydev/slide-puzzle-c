@@ -2,7 +2,7 @@
 //  Created by Rodolfo Gomez
 //
 //  Description: This is a linked list library which also acts as a dictionary
-//  Refereneced: http://codingfreak.blogspot.com/2009/08/implementation-of-singly-linked-list-in.html
+//  Referenced: http://codingfreak.blogspot.com/2009/08/implementation-of-singly-linked-list-in.html
 
 #include "list.h"
 
