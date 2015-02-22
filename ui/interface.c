@@ -134,6 +134,8 @@ char getNextCommand(Puzzle *puzzle) {
 }
 
 void printHeader() {
+    // make this pc compatible
+    //system("clear");
     printf("\n==============================\n");
     printf("||%7cSLIDE PUZZLE%7c||", ' ', ' ');
     printf("\n==============================");
@@ -150,7 +152,6 @@ void printBorder(int size) {
 
 
 void printPuzzle(Puzzle *puzzle) {
-    system("clear");
     int i, j, size = puzzle->size;
     printf("\n\nDificulty: %d x %d\n", size, size);
     printf("Shuffles: %d\n\n", shuffleCount);
