@@ -9,6 +9,9 @@ How to run .exe
 ----
 
 *Mac OS*
-1. Clone the repo
-2. Open Terminal and cd to slide-puzzle-c/build
-3. Enter the following command **./puzzle.exe**
+- Clone the repo
+- Open Terminal and cd to slide-puzzle-c/build
+- Enter the following command **./puzzle.exe**
+
+*Linux*
+- http://www.wikihow.com/Use-Wine-on-Linux
